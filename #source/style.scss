@@ -1,0 +1,104 @@
+@import "null.scss";
+
+@import "mixins.scss";
+/*ПЕРЕМЕННЫЕ------------------------------------------------------------------------*/
+
+/*ширина контейнера*/
+$maxWidthContainer: 1180px;
+/*Отступы у контейнера*/
+$paddingContainer: 0px 15px;
+/*Максимальная ширина*/
+$maxWidth: 1920;
+/*Минимальная ширина*/
+$minWidth: 320;
+
+// ROBOTO
+$roboto: 'Roboto', sans-serif;
+
+/*КОНТЕЙНЕР------------------------------------------------------------------------*/
+.container{
+    max-width: $maxWidthContainer;
+    padding: $paddingContainer;
+    margin: 0 auto;
+}
+/*ВРАППЕР------------------------------------------------------------------------*/
+.wrapper{
+    overflow: hidden;
+    min-height: 100%;
+    width: 100%;
+}
+
+body{
+    font-family: $roboto;
+    background-color: #C5C6E4;
+}
+.valid{
+    border: 1px solid green;
+}
+.invalid{
+    border: 1px solid red;
+}
+
+.sender{
+    color: white;
+    &__inner{
+        padding-top: 20px;
+    }
+    &__title{
+        font-size: 30px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    &__form{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 30px;
+    }
+    &__select-wrapper{
+        max-width: 320px;
+        position: relative;
+        &:after{
+            content: "";
+            position: absolute;
+            display: block;
+            border: 5px solid transparent; border-top: 10px solid #1A402E;
+            top: 15px;
+            right: 10px;
+        }
+    }
+    &__select{
+        cursor: pointer;
+        width: 100%;
+        padding: 10px 0px 10px 3px;
+        appearance:none;
+        transition: .4s all ease;
+    }
+    &__button{
+        max-width: 170px;
+        background: white;
+        border-radius: 2px;
+        padding: 10px 0px;
+        transition: .4s all ease;
+        &:hover{
+            transform: scale(1.1);
+            border: 1px solid blue;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
